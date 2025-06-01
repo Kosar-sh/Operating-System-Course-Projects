@@ -13,13 +13,14 @@ Broadcast Results: Room winners are announced to everyone via broadcast. The org
 Centralized Control: The game organizer can end the entire session at any time.
 
 ### How to Compile and Run
-Compilation
+1. Compilation
 
 A Makefile is provided. To compile the source code, simply run the make command in the project's root directory:
 
 `make`
 
-Running the Server (Game Organizer)
+2. Running the Server (Game Organizer)
+
 Use the following command to start the server:
 
 `./server.out {IP} {Port} {#Rooms}`
@@ -30,7 +31,7 @@ Use the following command to start the server:
 
 {#Rooms}: The number of game rooms to create.
 
-Running the Client (Player)
+3. Running the Client (Player)
 
 To launch a player client, use this command:
 
