@@ -75,3 +75,36 @@ The project must be compiled and run on a Linux operating system using the provi
     Execute the main program and provide the path to the directory containing the warehouse data files.
 
     `./main.out <path_to_stores_directory>`
+
+
+## CA3: Multi-Threaded Audio Filtering
+This project focuses on the principles of multi-threaded programming by applying various digital filters to an audio file. The core task is to implement a signal processing system in two distinct versions: a fully serial implementation and a parallel (multi-threaded) one. The primary goal is to analyze and compare the performance of these two approaches, specifically by calculating the speedup achieved through parallelization.
+
+
+### Required Filters
+You are required to implement four different digital filters that will be applied to a .wav audio file.
+
+-   Band-pass Filter: Allows frequencies within a specific range to pass through while blocking frequencies that are too low or too high.
+-   Notch Filter: Blocks a single, specific frequency, which is often useful for removing noise like electrical hum.
+-   FIR (Finite Impulse Response) Filter: A non-recursive digital filter where the output for a sample is calculated as a weighted sum of only past and present input signals.
+-   IIR (Infinite Impulse Response) Filter: A recursive digital filter that uses feedback. Its output depends not only on current and past inputs but also on previous output values.
+
+## Implementations
+1. Serial Implementation
+This version should perform all tasks sequentially. It will serve as the baseline for performance comparison, so it should be implemented as efficiently as possible. The implementation should identify the functions that consume the most execution time ("hotspots") for potential parallelization.
+
+2. Multi-Threaded Implementation
+This version parallelizes the "hotspot" operations identified in the serial version, such as reading audio frames and applying filters. The goal is to improve performance by processing data chunks across multiple threads. You must justify your choice of thread count and data division strategy.
+
+
+## How to Compile and Run
+Makefile: The project must contain a Makefile in both the serial and parallel directories.
+
+1. Compile: Navigate into either the serial or parallel directory and run the make command. This will create an executable file named VoiceFilters.out.
+
+    `make`
+
+2. Execute: Run the program from the command line, providing the input .wav file as an argument.
+Bash
+    `./VoiceFilters.out input.wav` 
+
