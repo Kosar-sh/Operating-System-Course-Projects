@@ -15,28 +15,25 @@ Centralized Control: The game organizer can end the entire session at any time.
 ### How to Compile and Run
 1. Compilation
 
-A Makefile is provided. To compile the source code, simply run the make command in the project's root directory:
+  A Makefile is provided. To compile the source code, simply run the make command in the project's root directory:
 
-`make`
+  `make`
 
 2. Running the Server (Game Organizer)
 
-Use the following command to start the server:
+  Use the following command to start the server:
 
-`./server.out {IP} {Port} {#Rooms}`
+  `./server.out {IP} {Port} {#Rooms}`
 
-{IP}: The IP address the organizer will run on.
-
-{Port}: The port number for the organizer to listen on.
-
-{#Rooms}: The number of game rooms to create.
+  - {IP}: The IP address the organizer will run on.
+  - {Port}: The port number for the organizer to listen on.
+  - {#Rooms}: The number of game rooms to create.
 
 3. Running the Client (Player)
 
-To launch a player client, use this command:
+  To launch a player client, use this command:
 
-`./client.out {IP} {Port}`
+  `./client.out {IP} {Port}`
 
-{IP}: The IP address of the game organizer.
-
-{Port}: The port number of the game organizer.
+  - {IP}: The IP address of the game organizer.
+  - {Port}: The port number of the game organizer.
